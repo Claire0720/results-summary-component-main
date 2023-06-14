@@ -1,0 +1,225 @@
+:root{
+    /* widths */
+    --Mobile: 375px;
+    --Desktop: 1440px;
+
+    /* Primary Colors */
+    --LightRed: hsl(0, 100%, 67%);
+    --OrangeyYellow: hsl(39, 100%, 56%);
+    --GreenTeal: hsl(166, 100%, 37%);
+    --CobaltBlue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+
+    --LightSlateBlue: hsl(252, 100%, 67%); /* Background Result */
+    --LightRoyalBlue: hsl(241, 81%, 54%); 
+    --VioletBlue: hsla(256, 72%, 46%, 1);
+    --PersianBlue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral colors */
+    --White: hsl(0, 0%, 100%);
+    --PaleBlue: hsl(221, 100%, 96%);
+    --LightLavender: hsl(241, 100%, 89%);
+    --DarkGrayBlue: hsl(224, 30%, 27%);
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--PaleBlue);
+}
+
+
+.container {
+    box-shadow: rgba(0, 0, 0, .24) 0px 3px 8px;
+    border-radius: 2rem;
+    width: 650px;
+    background-color: var(--White);
+}
+
+.container-card {
+    display: flex;
+}
+
+.result {
+    width: 50%;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, var(--LightSlateBlue), var(--LightRoyalBlue));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.result-title {
+    color: var(--LightLavender);
+}
+
+.result .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--LightRoyalBlue), var(--LightSlateBlue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.circle h1 {
+    font-size: 4rem;
+}
+
+.circle p {
+    color: var(--LightLavender);
+}
+
+.message b {
+    font-size: 2rem;
+    color: var(--White);
+}
+
+.message p {
+    color: var(--White);
+    margin-top: 10px;
+}
+
+.summary {
+    width: 50%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .8rem;
+}
+
+.container-red {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: .5rem .5rem;
+    border-radius: 10px;
+    background-color: #f8b0a8;
+    color: var(--LightRed);
+}
+
+
+.container-yellow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: .5rem .5rem;
+    border-radius: 10px;
+    background-color: #f5deaa;
+    color: var(--OrangeyYellow);
+}
+
+.container-green {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: .5rem .5rem;
+    border-radius: 10px;
+    background-color: #baf1f1;
+    color: var(--GreenTeal);
+}
+
+.container-blue {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: .5rem .5rem;
+    border-radius: 10px;
+    background-color: #b2b2ee;
+    color: var(--CobaltBlue);
+}
+
+.primary-btn {
+    background-color: var(--DarkGrayBlue);
+    border-radius: 50px;
+    color: var(--White);
+    padding: .5rem .5rem;
+    margin-top: 10px;
+    border-style: none;
+    transition: background 0.15s;
+    cursor: pointer;
+}
+
+.primary-btn:active {
+    background: linear-gradient(to bottom, var(--LightSlateBlue), var(--LightRoyalBlue));
+}
+
+
+
+.attribution { 
+    font-size: 11px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        align-items: flex-start;
+        background-color: white;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+
+    .container-card {
+        flex-direction: column;
+    }
+
+    .result {
+        width: 100%;
+        border-radius: 0 0 1rem;
+    }
+
+    .result .message {
+        width: 250px;
+    }
+
+    .summary {
+        width: 100%;
+    }
+}
